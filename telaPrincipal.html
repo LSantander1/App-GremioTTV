@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" id="u0"
+        href="https://pt.rakko.tools/tools/129/lib/tinymce/skins/ui/oxide/content.min.css">
+    <link rel="stylesheet" type="text/css" id="u1"
+        href="https://pt.rakko.tools/tools/129/lib/tinymce/skins/content/default/content.min.css">
+</head>
+
+<body id="tinymce" class="mce-content-body " data-id="content" contenteditable="false" spellcheck="false">
+    <h2>Olá professor!</h2>
+    <p>Na intenção de separar melhor os arquivos de cada professor, foi criado pastas para cada professor organizar como
+        quiser os seus documentos.</p>
+    <p><br data-mce-bogus="1"></p>
+    <p>No canto inferior esquerdo da Área de Trabalho você encontrará a pasta <strong>"Arquivos a ser
+            organizados"</strong> onde estão todos os arquivos que não foram separados. Você também encontrará a pasta
+        <strong>"Arquivos dos Professores"</strong> onde estão as pastas de cada professor.
+    </p>
+    <p><br data-mce-bogus="1"></p>
+    <p>Pedidos que assim que possível coloque os seus arquivos em sua pasta e sempre que for colocar arquivo novo no
+        computador, usar a sua pasta para isso. Desta forma os arquivos de cada professor estarão separados, ajudando
+        muito naquele momento que você não consegue acha aquele seu vídeo que ia passar para uma turma.</p>
+    <p><br data-mce-bogus="1"></p>
+    <p>Qualquer dúvida procure por Joás da 1002, integrante do grêmio responsavel pela Área de Tecnologia do CIEP 292.
+    </p>
+
+    <form>
+        <button type="submit">Fechar</button>
+    </form>
+
+    <script>
+        const electron = require('electron');
+        const { ipcRenderer } = electron;
+
+        document.querySelector('form').addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+            const item = 'aa'//document.querySelector('#item').value;
+            console.log(ipcRenderer);
+            ipcRenderer.send('item:add', item);
+        }
+    </script>
+</body>
+
+</html>

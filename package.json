@@ -1,0 +1,14 @@
+{
+  "name": "gremio-ttv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Joas MC",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^19.0.6"
+  }
+}
